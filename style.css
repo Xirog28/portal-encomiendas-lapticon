@@ -1,0 +1,386 @@
+
+/* =========================================
+   PORTAL DE ENCOMIENDAS LAPTICON
+   Diseño moderno | Montserrat
+   ========================================= */
+
+/* Importar tipografía */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+/* Variables de diseño */
+:root {
+    --primary: #2457d6;
+    --primary-dark: #193fa5;
+    --primary-light: #edf3ff;
+
+    --background: #f5f7fb;
+    --surface: #ffffff;
+
+    --text: #202938;
+    --muted: #697586;
+    --border: #e1e7f0;
+
+    --success: #15803d;
+    --danger: #dc2626;
+
+    --radius: 16px;
+    --shadow: 0 8px 30px rgba(30, 50, 90, 0.07);
+}
+
+/* Reinicio general */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 36px 24px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+
+    color: var(--text);
+    background: var(--background);
+}
+
+/* Contenedores principales */
+header,
+main,
+footer {
+    width: 100%;
+    max-width: 1120px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+header {
+    margin-bottom: 28px;
+    padding: 38px;
+
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+/* Título principal */
+h1 {
+    margin: 0 0 16px;
+
+    color: var(--primary-dark);
+
+    font-size: clamp(26px, 4vw, 38px);
+    font-weight: 800;
+    line-height: 1.35;
+
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+}
+
+/* Títulos de secciones */
+h2 {
+    margin: 0 0 24px;
+
+    color: var(--text);
+
+    font-size: 19px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    line-height: 1.6;
+}
+
+h3 {
+    font-size: 15px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+/* Párrafos */
+p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* Secciones y tarjetas */
+section {
+    margin-bottom: 26px;
+    padding: 30px;
+
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+/* Formularios */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    gap: 18px;
+}
+
+label {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 8px;
+
+    margin-bottom: 12px;
+
+    color: var(--text);
+    font-size: 11px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+}
+
+/* Campos de entrada */
+input,
+select,
+textarea {
+    width: 100%;
+    min-width: 0;
+    padding: 13px 14px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+
+    color: var(--text);
+    background: #ffffff;
+
+    border: 1px solid var(--border);
+    border-radius: 9px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #9aa5b5;
+    font-weight: 400;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(36, 87, 214, 0.10);
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Botones */
+button {
+    padding: 14px 22px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+
+    color: #ffffff;
+    background: var(--primary);
+
+    border: none;
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+button:hover {
+    background: var(--primary-dark);
+    box-shadow: 0 5px 14px rgba(36, 87, 214, 0.18);
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+/* Tablas */
+table {
+    width: 100%;
+    margin-top: 16px;
+
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    font-size: 12px;
+}
+
+th,
+td {
+    padding: 16px 14px;
+    text-align: left;
+
+    border-bottom: 1px solid var(--border);
+}
+
+th {
+    color: var(--muted);
+    background: #f8faff;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+
+td {
+    font-weight: 500;
+}
+
+tbody tr {
+    transition: background 0.2s ease;
+}
+
+tbody tr:hover {
+    background: #f8faff;
+}
+
+td button {
+    padding: 9px 12px;
+    font-size: 10px;
+}
+
+/* Mensajes de estado */
+#mensaje,
+#mensaje-ciudades,
+#mensaje-encomiendas {
+    margin-top: 16px;
+
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Pie de página */
+footer {
+    padding: 24px 0;
+
+    color: var(--muted);
+    text-align: center;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+}
+
+/* Selección de texto */
+::selection {
+    color: #ffffff;
+    background: var(--primary);
+}
+
+/* =========================================
+   DISEÑO RESPONSIVE
+   ========================================= */
+
+@media (max-width: 700px) {
+    body {
+        padding: 18px 12px;
+    }
+
+    header {
+        padding: 25px 20px;
+    }
+
+    section {
+        padding: 22px 16px;
+    }
+
+    h1 {
+        font-size: 25px;
+        letter-spacing: 0.06em;
+    }
+
+    h2 {
+        font-size: 16px;
+        letter-spacing: 0.08em;
+    }
+
+    form {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    label {
+        width: 100%;
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: 13px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    th,
+    td {
+        padding: 12px 10px;
+    }
+}
+
+/* Pantallas muy pequeñas */
+@media (max-width: 380px) {
+    h1 {
+        font-size: 21px;
+    }
+
+    header,
+    section {
+        padding: 18px 14px;
+    }
+
+    h2 {
+        font-size: 14px;
+    }
+}
